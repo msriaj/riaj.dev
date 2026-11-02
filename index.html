@@ -1,329 +1,400 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="is-loading">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>MD RIAJ — Creative developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f6f0e5" />
-    <meta name="title" content="MD RIAJ — Creative developer" />
+    <title>MD Riaj — Senior Software Engineer</title>
     <meta
       name="description"
-      content="MD RIAJ, Creative developer based in Bangladesh"
+      content="MD Riaj is a senior software engineer in Dhaka building web products end to end — interfaces, APIs and the infrastructure behind them."
     />
+    <meta name="theme-color" content="#0d0d0c" />
+    <meta property="og:title" content="MD Riaj — Senior Software Engineer" />
     <meta
       property="og:description"
-      content="MD RIAJ, Creative developer based in Bangladesh"
+      content="Web products, end to end. Interfaces, APIs and infrastructure — from Dhaka, for clients worldwide."
     />
-    <meta property="og:image" content="/assets/img/social-card.jpg" />
-    <meta property="og:image:type" content="image/jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="800" />
-    <meta property="og:title" content="MD RIAJ — Creative developer" />
-    <meta property="og:site_name" content="MD RIAJ — Creative developer" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gnrm.se" />
-    <link
-      rel="preload"
-      href="/pp-rader-bold.c744731b.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/pp-radio-grotesk-black.b350c270.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.a89c2056.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.2e7fb2b4.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon-16x16.0fdfedd9.png"
-    />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/safari-pinned-tab.77158dc8.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#f6f0e5" />
+    <meta property="og:url" content="https://riaj.dev" />
+    <meta property="og:site_name" content="MD Riaj" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <main id="app">
-      <div class="content">
-        <div class="column">
-          <div class="intro">
-            <div class="pre-wrapper">
-              <small class="js-pre pre">front-end developer</small>
-            </div>
-            <h1 class="title">
-              <span class="title-1 title-paragraph">
-                <span class="js-title">MD</span>
-              </span>
-              <span class="title-2 title-paragraph">
-                <span class="js-title">RIAJ</span>
-              </span>
-            </h1>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__mark">
+        <span class="preloader__word"><span>MD Riaj</span></span>
+        <span class="preloader__sub mono"><span>Software Engineer &mdash; Dhaka</span></span>
+      </div>
+      <span class="preloader__bar"><i class="js-bar"></i></span>
+    </div>
+
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__dot"></span>
+      <span class="cursor__label js-cursor-label">View</span>
+    </div>
+
+    <div class="preview" aria-hidden="true">
+      <div class="preview__inner">
+        <img src="/work/golden.jpg" alt="" data-preview="golden" />
+        <img src="/work/sajida.jpg" alt="" data-preview="sajida" />
+        <img src="/work/mavi.jpg" alt="" data-preview="mavi" />
+      </div>
+    </div>
+
+    <canvas class="gl-gallery" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top" data-roll data-scroll-to>MD Riaj</a>
+      <button class="nav__toggle js-menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="nav__toggle-text" aria-hidden="true"><span>Menu</span><span>Close</span></span>
+        <span class="sr-only">Toggle menu</span>
+        <span class="nav__toggle-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu__links" aria-label="Primary">
+        <a class="menu__link" href="#work" data-scroll-to><span>Work</span></a>
+        <a class="menu__link" href="#about" data-scroll-to><span>About</span></a>
+        <a class="menu__link" href="#experience" data-scroll-to><span>Experience</span></a>
+        <a class="menu__link" href="#contact" data-scroll-to><span>Contact</span></a>
+      </nav>
+      <div class="menu__foot">
+        <a href="mailto:contact.riaj@gmail.com" data-roll>contact.riaj@gmail.com</a>
+        <span class="menu__socials">
+          <a href="https://www.linkedin.com/in/msriaj/" target="_blank" rel="noopener" data-roll>LinkedIn</a>
+          <a href="https://github.com/msriaj" target="_blank" rel="noopener" data-roll>GitHub</a>
+        </span>
+        <span class="menu__time">Dhaka, <time class="js-clock">--<i>:</i>--</time></span>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero" data-section="hero">
+        <canvas class="field js-field-hero" aria-hidden="true"></canvas>
+
+        <div class="hero__top">
+          <p class="hero__eyebrow mono js-hero-fade">
+            <span class="status-dot"></span>Available for select projects
+          </p>
+          <h1 class="hero__lede js-hero-lede">
+            I build web products end to end &mdash; the parts people touch, and
+            the parts that keep it all running.
+          </h1>
+        </div>
+
+        <div class="hero__meta mono">
+          <div class="hero__meta-item js-hero-fade">
+            <span class="label">Based</span>
+            <span>Dhaka, Bangladesh</span>
           </div>
-          <div class="js-thumbnails-container projects-thumbnail">
-            <picture class="js-thumbnail thumbnail">
-              <img
-                src="shantaholdings-banner.png"
-                alt="Thumbnail Shanta Holdings"
-              />
-            </picture>
-            <picture class="js-thumbnail thumbnail">
-              <img src="golden-banner.jpg" alt="Thumbnail Golden Group" />
-            </picture>
-            <picture class="js-thumbnail thumbnail">
-              <img src="lets-vibe-banner.png" alt="Thumbnail LetsvibeBD" />
-            </picture>
-            <picture class="js-thumbnail thumbnail">
-              <img src="mavi-banner.png" alt="Thumbnail Mavi " />
-            </picture>
-            <picture class="js-thumbnail thumbnail">
-              <img src="/sajida-banner.jpg" alt="Thumbnail Sajida" />
-            </picture>
+          <div class="hero__meta-item js-hero-fade">
+            <span class="label">Currently</span>
+            <span>Senior Engineer, COdesign</span>
+          </div>
+          <div class="hero__meta-item js-hero-fade">
+            <span class="label">Focus</span>
+            <span>Full-stack &amp; WebGL</span>
+          </div>
+          <div class="hero__meta-item hero__scroll js-hero-fade">
+            <span class="label">Scroll</span>
+            <span class="hero__scroll-line"><i></i></span>
           </div>
         </div>
-        <div class="column">
-          <div class="about">
-            <div class="pre-wrapper">
-              <small class="js-pre pre">about</small>
-            </div>
-            <p class="about__copy">
-              <span class="about-desktop js-about-desktop">
-                Frontend Developer who transforms designs into engaging digital
-                experiences. <br />
-                Currently at COdesign, I've developed dynamic websites for
-                industry leaders like <br />
-                Shanta Holdings, Golden Group, LetsvibeBD, Toyota, BRAC, and
-                Mavi, <br />
-                along with other innovative projects, blending sleek interfaces,
-                efficient code, <br />
-                and captivating animations to deliver responsive, user-focused
-                solutions.
-              </span>
-              <span class="about-mobile js-about-mobile">
-                Frontend Developer who transforms designs into <br />
-                engaging digital experiences. <br />
-                Currently at COdesign, I've developed dynamic websites for
-                industry leaders like <br />
-                Shanta Holdings, Golden Group, LetsvibeBD, Toyota, BRAC, and
-                Mavi, <br />
-                along with other innovative projects, blending sleek interfaces,
-                efficient code, <br />
-                and captivating animations to deliver <br />
-                responsive, user-focused solutions.
-              </span>
+
+        <h2 class="hero__name" aria-label="MD Riaj">
+          <span class="hero__name-text js-hero-name" aria-hidden="true">MD&nbsp;RIAJ</span>
+        </h2>
+      </section>
+
+      <!-- About -->
+      <section class="about section" id="about">
+        <header class="section__head">
+          <span class="mono">About</span>
+          <span class="rule js-rule"></span>
+        </header>
+
+        <p class="about__statement js-scrub">
+          The best software goes unnoticed &mdash; a page that&rsquo;s ready
+          before you look, motion that feels natural, a release nobody loses
+          sleep over. I work across the whole stack so those details survive
+          every handoff, from design file to production server.
+        </p>
+
+        <div class="about__grid">
+          <div class="about__body">
+            <p data-reveal="lines">
+              Today I&rsquo;m a senior engineer at COdesign, where I lead code
+              review, set the conventions the team ships with and look after the
+              servers behind every client site we run.
+            </p>
+            <p data-reveal="lines">
+              Before that, three years freelancing &mdash; thirty-odd projects
+              for people in more than ten countries. It taught me to own the
+              outcome, not just the ticket.
             </p>
           </div>
-          <div class="projects">
-            <div class="pre-wrapper">
-              <small class="js-pre pre">selected projects</small>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section class="work section" id="work">
+        <header class="section__head">
+          <span class="mono">Selected work</span>
+          <span class="rule js-rule"></span>
+        </header>
+
+        <h2 class="section__title" data-reveal="lines">
+          A few things I&rsquo;ve <br />built recently
+        </h2>
+
+        <div class="projects">
+          <article class="project project--left">
+            <a
+              class="project__media js-media"
+              href="https://magnify.partners"
+              target="_blank"
+              rel="noopener"
+              data-cursor="Visit"
+            >
+              <img src="/work/magnify.jpg" alt="Magnify Partners website — a 3D flower rendered in WebGL" width="1600" height="940" />
+            </a>
+            <div class="project__info">
+              <h3 class="project__title" data-reveal="chars">Magnify Partners</h3>
+              <p class="project__desc" data-reveal="lines">
+                Scroll- and pointer-driven 3D for a Lisbon advisory firm. Most of
+                the work was invisible: trimming geometry and render loops until
+                it ran smoothly on a mid-range phone.
+              </p>
+              <ul class="project__tags mono">
+                <li>Three.js</li><li>GLSL</li><li>GSAP</li><li>Nuxt</li>
+              </ul>
             </div>
-            <ul class="js-projects-container projects__list">
-              <li class="js-project projects__list-item">
-                <a
-                  class="js-project-link project__link"
-                  href="https://shantaholdings.com/"
-                  target="_blank"
-                >
-                  <span class="project__index">01</span>
-                  <span class="project__name">
-                    <span class="project__name-wrapper">
-                      <span class="project__arrow">→</span>
-                      <span class="project__copy"> Shanta Holdings </span>
-                    </span>
-                  </span>
-                  <span class="project__year">2025</span>
-                </a>
-              </li>
-              <li class="js-project projects__list-item">
-                <a
-                  class="js-project-link project__link"
-                  href="https://goldengroup-bd.com/"
-                  target="_blank"
-                >
-                  <span class="project__index">02</span>
-                  <span class="project__name">
-                    <span class="project__name-wrapper">
-                      <span class="project__arrow">→</span>
-                      <span class="project__copy"> Golden Group </span>
-                    </span>
-                  </span>
-                  <span class="project__year">2024</span>
-                </a>
-              </li>
-              <li class="js-project projects__list-item">
-                <a
-                  class="js-project-link project__link"
-                  href="https://letsvibebd.com/"
-                  target="_blank"
-                >
-                  <span class="project__index">03</span>
-                  <span class="project__name">
-                    <span class="project__name-wrapper">
-                      <span class="project__arrow">→</span>
-                      <span class="project__copy"> Let's Vibe BD </span>
-                    </span>
-                  </span>
-                  <span class="project__year">2024</span>
-                </a>
-              </li>
-              <li class="js-project projects__list-item">
-                <a
-                  class="js-project-link project__link"
-                  href="https://mavi.co.design/"
-                  target="_blank"
-                >
-                  <span class="project__index">04</span>
-                  <span class="project__name">
-                    <span class="project__name-wrapper">
-                      <span class="project__arrow">→</span>
-                      <span class="project__copy">Mavi </span>
-                    </span>
-                  </span>
-                  <span class="project__year">2024</span>
-                </a>
-              </li>
-              <li class="js-project projects__list-item">
-                <a
-                  class="js-project-link project__link"
-                  href="https://sajida.org/"
-                  target="_blank"
-                >
-                  <span class="project__index">05</span>
-                  <span class="project__name">
-                    <span class="project__name-wrapper">
-                      <span class="project__arrow">→</span>
-                      <span class="project__copy">Sajida Foundation </span>
-                    </span>
-                  </span>
-                  <span class="project__year">2023</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="column">
-          <div class="contacts">
-            <div class="pre-wrapper">
-              <small class="js-pre pre">contacts</small>
+          </article>
+
+          <article class="project project--right">
+            <a
+              class="project__media js-media"
+              href="https://1united.gg"
+              target="_blank"
+              rel="noopener"
+              data-cursor="Visit"
+            >
+              <img src="/work/1united.jpg" alt="1United esports platform landing page" width="1600" height="1000" />
+            </a>
+            <div class="project__info">
+              <h3 class="project__title" data-reveal="chars">1United</h3>
+              <p class="project__desc" data-reveal="lines">
+                Bangladesh&rsquo;s esports tournament platform. I built the whole
+                frontend &mdash; sign-up, OTP, roles &mdash; and replaced hand
+                deploys with pipelines. Thousands of players since.
+              </p>
+              <ul class="project__tags mono">
+                <li>Next.js</li><li>TypeScript</li><li>Docker</li><li>GitLab CI</li>
+              </ul>
             </div>
-            <ul class="contacts__list">
-              <li class="contacts__list-item">
-                <a
-                  class="contact__link js-contact-link"
-                  href="mailto:contact.riaj@gmail.com"
-                >
-                  <span class="contact__link-wrapper">
-                    <span class="link-arrow">→</span>
-                    <span>contact.riaj@gmail.com</span>
-                  </span>
-                </a>
-              </li>
-              <li class="contacts__list-item item-phone">
-                <a
-                  class="contact__link js-contact-link"
-                  href="tel:+8801798691956"
-                >
-                  <span class="contact__link-wrapper">
-                    <span class="link-arrow">→</span>
-                    <span>+880 179 8691956</span>
-                  </span>
-                </a>
-              </li>
-              <li class="contacts__list-item item-link">
-                <a
-                  class="contact__link js-contact-link"
-                  href="https://github.com/msriaj"
-                  target="_blank"
-                >
-                  <span class="contact__link-wrapper">
-                    <span class="link-arrow">→</span>
-                    <span>Github</span>
-                  </span>
-                </a>
-              </li>
-              <li class="contacts__list-item item-link">
-                <a
-                  class="contact__link js-contact-link"
-                  href="https://www.instagram.com/fake.sohel/"
-                  target="_blank"
-                >
-                  <span class="contact__link-wrapper">
-                    <span class="link-arrow">→</span>
-                    <span>Instagram</span>
-                  </span>
-                </a>
-              </li>
-              <li class="contacts__list-item item-link">
-                <a
-                  class="contact__link js-contact-link"
-                  href="https://www.linkedin.com/in/msriaj/"
-                  target="_blank"
-                >
-                  <span class="contact__link-wrapper">
-                    <span class="link-arrow">→</span>
-                    <span>LinkedIn</span>
-                  </span>
-                </a>
-              </li>
-            </ul>
+          </article>
+
+          <article class="project project--left">
+            <a
+              class="project__media js-media"
+              href="https://shantaholdings.com"
+              target="_blank"
+              rel="noopener"
+              data-cursor="Visit"
+            >
+              <img src="/work/shantaholdings.jpg" alt="Shanta Holdings website shown on a laptop" width="1600" height="899" />
+            </a>
+            <div class="project__info">
+              <h3 class="project__title" data-reveal="chars">Shanta Holdings</h3>
+              <p class="project__desc" data-reveal="lines">
+                The digital home of Bangladesh&rsquo;s leading luxury developer.
+                CMS architecture, a responsive frontend and the long tail of
+                performance work, go-live and support.
+              </p>
+              <ul class="project__tags mono">
+                <li>Nuxt</li><li>Django</li><li>Wagtail</li><li>PostgreSQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project project--right">
+            <a
+              class="project__media js-media"
+              href="https://niraan.com"
+              target="_blank"
+              rel="noopener"
+              data-cursor="Visit"
+            >
+              <img src="/work/niraan.jpg" alt="Niraan storefront — a warmly lit dinner table" width="1600" height="960" />
+            </a>
+            <div class="project__info">
+              <h3 class="project__title" data-reveal="chars">Niraan</h3>
+              <p class="project__desc" data-reveal="lines">
+                A headless Shopify storefront with a custom Nuxt frontend, and a
+                CMS for everything that isn&rsquo;t a product. Commerce that
+                feels like a magazine.
+              </p>
+              <ul class="project__tags mono">
+                <li>Shopify</li><li>Nuxt</li><li>Headless CMS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="index">
+          <div class="index__head mono">
+            <span>Also built</span>
+            <span>Type</span>
+            <span class="index__col-context">Context</span>
+            <span class="index__col-link"></span>
           </div>
+          <ul class="index__list js-index">
+            <li class="index__row">
+              <div class="index__link">
+                <span class="index__name">Runtime</span>
+                <span class="index__type">Work management platform</span>
+                <span class="index__context mono">Internal &mdash; used daily by ~50 people</span>
+                <span class="index__arrow mono">Private</span>
+              </div>
+            </li>
+            <li class="index__row" data-preview="golden">
+              <a class="index__link" href="https://goldengroup-bd.com" target="_blank" rel="noopener">
+                <span class="index__name">Golden Group</span>
+                <span class="index__type">Corporate website</span>
+                <span class="index__context mono">Industrial group, Bangladesh</span>
+                <span class="index__arrow mono">↗</span>
+              </a>
+            </li>
+            <li class="index__row" data-preview="sajida">
+              <a class="index__link" href="https://sajida.org" target="_blank" rel="noopener">
+                <span class="index__name">SAJIDA Foundation</span>
+                <span class="index__type">Institutional website</span>
+                <span class="index__context mono">NGO reaching millions each year</span>
+                <span class="index__arrow mono">↗</span>
+              </a>
+            </li>
+            <li class="index__row">
+              <div class="index__link">
+                <span class="index__name">Navana &mdash; Toyota</span>
+                <span class="index__type">Corporate website</span>
+                <span class="index__context mono">Toyota&rsquo;s distributor in Bangladesh</span>
+                <span class="index__arrow mono">&mdash;</span>
+              </div>
+            </li>
+            <li class="index__row" data-preview="mavi">
+              <a class="index__link" href="https://mavi.co.design" target="_blank" rel="noopener">
+                <span class="index__name">Mavi</span>
+                <span class="index__type">Brand website</span>
+                <span class="index__context mono">Frontend &amp; motion</span>
+                <span class="index__arrow mono">↗</span>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="background-year__container">
-        <div class="background-year">
-          <svg
-            xml:space="preserve"
-            class="year-svg js-year-light"
-            viewBox="0 0 686.6 560.4"
-          >
-            <path
-              d="M521.7 150c-37.5 0-67.9 9-90.8 27.4l.8-37.1c.8-29.2 15.4-44.6 42.4-44.6h201v-86H334.2L332.6 77C306.2 29.2 253.3 1.1 177 1.1 64.9 1.1 1.1 62.6 1.1 174.7v30.8h101.2V177c0-55.1 26.2-85.1 76.1-85.1 45.4 0 70.5 25.9 70.5 67.5 0 31.5-20.6 60-52.9 81.4L74.2 320.6c-51 33-70.9 82.9-70.9 145.1v93.8h347.2v-64.2c28.5 48.2 81.4 70.9 152 70.9 121.5 0 182.6-67.5 182.6-173.2v-69.4c.1-105.8-59.9-173.6-163.4-173.6zM584 393c0 55.9-26.6 84.4-78.8 84.4-49.5 0-77.2-25.9-77.2-84.4v-28.1H326.7V393c0 27.7 3.6 51.9 10.6 72.8H158.6c-29.2 0-43.1-16.1-43.1-34.5 0-14.6 9.4-31.5 25.5-41.6l124.1-78.4c23.5-14.7 46.8-34.9 63.4-62.4l-1.8 74.8H428v-7.1c2.2-53.6 30-77.2 77.2-77.2 52.1 0 78.8 28.5 78.8 84.4V393z"
-              fill="none"
-              stroke="#000"
-              stroke-width="2"
-              stroke-miterlimit="10"
-            />
-          </svg>
-          <svg
-            xml:space="preserve"
-            class="year-svg js-year-dark"
-            viewBox="0 0 686.6 560.4"
-          >
-            <path
-              d="M521.7 150c-37.5 0-67.9 9-90.8 27.4l.8-37.1c.8-29.2 15.4-44.6 42.4-44.6h201v-86H334.2L332.6 77C306.2 29.2 253.3 1.1 177 1.1 64.9 1.1 1.1 62.6 1.1 174.7v30.8h101.2V177c0-55.1 26.2-85.1 76.1-85.1 45.4 0 70.5 25.9 70.5 67.5 0 31.5-20.6 60-52.9 81.4L74.2 320.6c-51 33-70.9 82.9-70.9 145.1v93.8h347.2v-64.2c28.5 48.2 81.4 70.9 152 70.9 121.5 0 182.6-67.5 182.6-173.2v-69.4c.1-105.8-59.9-173.6-163.4-173.6zM584 393c0 55.9-26.6 84.4-78.8 84.4-49.5 0-77.2-25.9-77.2-84.4v-28.1H326.7V393c0 27.7 3.6 51.9 10.6 72.8H158.6c-29.2 0-43.1-16.1-43.1-34.5 0-14.6 9.4-31.5 25.5-41.6l124.1-78.4c23.5-14.7 46.8-34.9 63.4-62.4l-1.8 74.8H428v-7.1c2.2-53.6 30-77.2 77.2-77.2 52.1 0 78.8 28.5 78.8 84.4V393z"
-              fill="none"
-              stroke="#000"
-              stroke-width="2"
-              stroke-miterlimit="10"
-            />
-          </svg>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience section" id="experience">
+        <header class="section__head">
+          <span class="mono">Experience</span>
+          <span class="rule js-rule"></span>
+        </header>
+
+        <div class="experience__grid">
+          <p class="experience__intro" data-reveal="lines">
+            Three years at COdesign, promoted twice. Before that, three years on
+            my own &mdash; which is where I learned that shipping is a habit.
+          </p>
+
+          <ol class="timeline">
+            <li class="timeline__row">
+              <span class="timeline__years mono">2026 &mdash; Now</span>
+              <span class="timeline__role">Senior Software Engineer</span>
+              <span class="timeline__org">COdesign</span>
+              <span class="timeline__note mono">Direction, review, mentoring</span>
+            </li>
+            <li class="timeline__row">
+              <span class="timeline__years mono">2024 &mdash; 2026</span>
+              <span class="timeline__role">Software Engineer, Full-stack</span>
+              <span class="timeline__org">COdesign</span>
+              <span class="timeline__note mono">APIs, auth, infrastructure</span>
+            </li>
+            <li class="timeline__row">
+              <span class="timeline__years mono">2023 &mdash; 2024</span>
+              <span class="timeline__role">Software Engineer, Frontend</span>
+              <span class="timeline__org">COdesign</span>
+              <span class="timeline__note mono">Interfaces &amp; motion</span>
+            </li>
+            <li class="timeline__row">
+              <span class="timeline__years mono">2023</span>
+              <span class="timeline__role">Software Engineering Intern</span>
+              <span class="timeline__org">Future Innovations Ltd.</span>
+              <span class="timeline__note mono">First in-house role</span>
+            </li>
+            <li class="timeline__row">
+              <span class="timeline__years mono">2020 &mdash; 2023</span>
+              <span class="timeline__role">Freelance Developer</span>
+              <span class="timeline__org">Independent</span>
+              <span class="timeline__note mono">30+ projects, 5.0 rating</span>
+            </li>
+          </ol>
         </div>
-      </div>
-      <footer class="footer">
-        <p class="footer__copy">new website coming soon</p>
-        <p class="footer__copy">© 2025 — Bangladesh</p>
-      </footer>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <canvas class="field js-field-contact" aria-hidden="true"></canvas>
+
+        <div class="contact__inner">
+          <header class="section__head">
+            <span class="mono">Contact</span>
+            <span class="rule js-rule"></span>
+          </header>
+
+          <h2 class="contact__title" data-reveal="lines">
+            Have something <br />worth building?
+          </h2>
+
+          <a class="contact__email" href="mailto:contact.riaj@gmail.com" data-magnetic data-cursor="Write">
+            <span class="contact__email-text" data-roll>contact.riaj@gmail.com</span>
+            <span class="contact__email-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </span>
+          </a>
+
+          <div class="contact__grid mono">
+            <div class="contact__col">
+              <span class="label">Elsewhere</span>
+              <a href="https://www.linkedin.com/in/msriaj/" target="_blank" rel="noopener" data-roll>LinkedIn</a>
+              <a href="https://github.com/msriaj" target="_blank" rel="noopener" data-roll>GitHub</a>
+            </div>
+            <div class="contact__col">
+              <span class="label">Direct</span>
+              <a href="tel:+8801798691956" data-roll>+880 1798 691956</a>
+              <a href="/md-riaj-resume.pdf" target="_blank" rel="noopener" data-roll>Résumé (PDF)</a>
+            </div>
+            <div class="contact__col">
+              <span class="label">Local time</span>
+              <span>Dhaka, <time class="js-clock">--<i>:</i>--</time> GMT+6</span>
+            </div>
+            <div class="contact__col">
+              <span class="label">Response</span>
+              <span>Usually within a day</span>
+            </div>
+          </div>
+
+          <footer class="footer mono">
+            <span>&copy; 2026 MD Riaj</span>
+            <span class="footer__mid">Designed &amp; built in Dhaka</span>
+            <a href="#top" data-roll data-scroll-to>Back to top ↑</a>
+          </footer>
+        </div>
+      </section>
     </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
